@@ -11,6 +11,11 @@
 		6A32658A2C43FADD00100E5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3265892C43FADD00100E5B /* ContentView.swift */; };
 		6A32658C2C43FADE00100E5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A32658B2C43FADE00100E5B /* Assets.xcassets */; };
 		6A32658F2C43FADE00100E5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A32658E2C43FADE00100E5B /* Preview Assets.xcassets */; };
+		6A3265962C43FAEF00100E5B /* AudioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3265952C43FAEF00100E5B /* AudioViewModel.swift */; };
+		6A3265992C43FB2600100E5B /* SwiftWhisper in Frameworks */ = {isa = PBXBuildFile; productRef = 6A3265982C43FB2600100E5B /* SwiftWhisper */; };
+		6A32659C2C43FB3400100E5B /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6A32659B2C43FB3400100E5B /* AudioKit */; };
+		6A32659F2C43FB6600100E5B /* tiny-encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 6A32659D2C43FB6400100E5B /* tiny-encoder.mlmodelc */; };
+		6A3265A02C43FB6600100E5B /* tiny.bin in Resources */ = {isa = PBXBuildFile; fileRef = 6A32659E2C43FB6600100E5B /* tiny.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		6A3265892C43FADD00100E5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A32658B2C43FADE00100E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A32658E2C43FADE00100E5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6A3265952C43FAEF00100E5B /* AudioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewModel.swift; sourceTree = "<group>"; };
+		6A32659D2C43FB6400100E5B /* tiny-encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "tiny-encoder.mlmodelc"; sourceTree = "<group>"; };
+		6A32659E2C43FB6600100E5B /* tiny.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = tiny.bin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A32659C2C43FB3400100E5B /* AudioKit in Frameworks */,
+				6A3265992C43FB2600100E5B /* SwiftWhisper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +63,9 @@
 			children = (
 				6A3265872C43FADD00100E5B /* AppleMeetsWhisperApp.swift */,
 				6A3265892C43FADD00100E5B /* ContentView.swift */,
+				6A3265952C43FAEF00100E5B /* AudioViewModel.swift */,
+				6A32659D2C43FB6400100E5B /* tiny-encoder.mlmodelc */,
+				6A32659E2C43FB6600100E5B /* tiny.bin */,
 				6A32658B2C43FADE00100E5B /* Assets.xcassets */,
 				6A32658D2C43FADE00100E5B /* Preview Content */,
 			);
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = AppleMeetsWhisper;
+			packageProductDependencies = (
+				6A3265982C43FB2600100E5B /* SwiftWhisper */,
+				6A32659B2C43FB3400100E5B /* AudioKit */,
+			);
 			productName = AppleMeetsWhisper;
 			productReference = 6A3265842C43FADD00100E5B /* AppleMeetsWhisper.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 6A32657B2C43FADD00100E5B;
+			packageReferences = (
+				6A3265972C43FB2600100E5B /* XCRemoteSwiftPackageReference "SwiftWhisper" */,
+				6A32659A2C43FB3400100E5B /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 6A3265852C43FADD00100E5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A32658F2C43FADE00100E5B /* Preview Assets.xcassets in Resources */,
+				6A32659F2C43FB6600100E5B /* tiny-encoder.mlmodelc in Resources */,
 				6A32658C2C43FADE00100E5B /* Assets.xcassets in Resources */,
+				6A3265A02C43FB6600100E5B /* tiny.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A32658A2C43FADD00100E5B /* ContentView.swift in Sources */,
+				6A3265962C43FAEF00100E5B /* AudioViewModel.swift in Sources */,
 				6A3265882C43FADD00100E5B /* AppleMeetsWhisperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +368,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A3265972C43FB2600100E5B /* XCRemoteSwiftPackageReference "SwiftWhisper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exPHAT/SwiftWhisper?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		6A32659A2C43FB3400100E5B /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A3265982C43FB2600100E5B /* SwiftWhisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A3265972C43FB2600100E5B /* XCRemoteSwiftPackageReference "SwiftWhisper" */;
+			productName = SwiftWhisper;
+		};
+		6A32659B2C43FB3400100E5B /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A32659A2C43FB3400100E5B /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A32657C2C43FADD00100E5B /* Project object */;
 }

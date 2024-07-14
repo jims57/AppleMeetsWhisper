@@ -1,0 +1,24 @@
+{
+  "originHash" : "0ca04e5543e08e8c1689e747405af1c897232ccdf9d76e3a7cda9c6a4a0aca65",
+  "pins" : [
+    {
+      "identity" : "audiokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKit",
+      "state" : {
+        "revision" : "2ebd422855e4645d3169f83d1765d1c8196b4f46",
+        "version" : "5.6.4"
+      }
+    },
+    {
+      "identity" : "swiftwhisper?tab=readme-ov-file",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exPHAT/SwiftWhisper?tab=readme-ov-file",
+      "state" : {
+        "revision" : "a192004db08de7c6eaa169eede77f1625e7d23fb",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
