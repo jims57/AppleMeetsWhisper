@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043DFA7A2D3F7DE100DFBDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A3265842C43FADD00100E5B /* AppleMeetsWhisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMeetsWhisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3265872C43FADD00100E5B /* AppleMeetsWhisperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMeetsWhisperApp.swift; sourceTree = "<group>"; };
 		6A3265892C43FADD00100E5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		6A3265862C43FADD00100E5B /* AppleMeetsWhisper */ = {
 			isa = PBXGroup;
 			children = (
+				043DFA7A2D3F7DE100DFBDF6 /* Info.plist */,
 				6A3265872C43FADD00100E5B /* AppleMeetsWhisperApp.swift */,
 				6A3265892C43FADD00100E5B /* ContentView.swift */,
 				6A3265952C43FAEF00100E5B /* AudioViewModel.swift */,
@@ -296,9 +298,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleMeetsWhisper/Preview Content\"";
-				DEVELOPMENT_TEAM = KH8B299556;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleMeetsWhisper/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone to record audio for transcription";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,9 +329,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppleMeetsWhisper/Preview Content\"";
-				DEVELOPMENT_TEAM = KH8B299556;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppleMeetsWhisper/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to microphone to record audio for transcription";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

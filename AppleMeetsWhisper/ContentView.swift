@@ -8,20 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var startImporting: Bool = false
+    @StateObject var audioVM = AudioViewModel()
     @State var processing: Bool = false
     @State var audioTranscription: String?
     
-    var audioVM = AudioViewModel()
-    
     var body: some View {
         VStack {
-            Button("Import Audio") {
-                self.processing = false
-                self.audioTranscription = nil
-                self.startImporting.toggle()
+            Button(audioVM.isRecording ? "Stop Recording" : "Start Recording") {
+                if audioVM.isRecording {
+                    self.processing = true
+                    audioVM.stopRecording { result in
+                        switch result {
+                            case .success(let transcription):
+                                self.processing = false
+                                self.audioTranscription = transcription
+                            case .failure(let error):
+                                print(error)
+                                self.processing = false
+                        }
+                    }
+                } else {
+                    self.audioTranscription = nil
+                    audioVM.startRecording()
+                }
             }
+            .buttonStyle(.borderedProminent)
             
             ScrollView {
                 if let audioTranscription {
@@ -33,28 +44,6 @@ struct ContentView: View {
             }
         }
         .padding()
-        .fileImporter(isPresented: $startImporting, allowedContentTypes: [.audio]) { result in
-            handleFileMediaResponse(result)
-        }
-    }
-    
-    func handleFileMediaResponse(_ result: Result<URL, any Error>) {
-        switch result {
-            case .success(let success):
-                self.processing = true
-                _ = success.startAccessingSecurityScopedResource()
-                audioVM.extractTextFromAudio(success.absoluteURL) { result in
-                    switch result {
-                        case .success(let success):
-                            self.processing = false
-                            self.audioTranscription = success
-                        case .failure(let failure):
-                            print(failure)
-                    }
-                }
-            case .failure(let failure):
-                print(failure)
-        }
     }
 }
 
